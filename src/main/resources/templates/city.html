@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../static/assets/bower_components/bootstrap/dist/css/bootstrap.min.css" th:href="@{/assets/bower_components/bootstrap/dist/css/bootstrap.min.css}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../static/assets/bower_components/font-awesome/css/font-awesome.min.css" th:href="@{/assets/bower_components/font-awesome/css/font-awesome.min.css}">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../static/assets/bower_components/Ionicons/css/ionicons.min.css" th:href="@{/assets/bower_components/Ionicons/css/ionicons.min.css}">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="../static/assets/plugins/iCheck/all.css" th:href="@{/assets/plugins/iCheck/all.css}">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../static/assets/css/AdminLTE.css" th:href="@{/assets/css/AdminLTE.css}">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+    folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="../static/assets/css/skins/_all-skins.min.css" th:href="@{/assets/css/skins/_all-skins.min.css}">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- /.row -->
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Responsive Hover Table</h3>
+
+                <div class="box-tools">
+                    <div class="input-group input-group-sm" style="width: 150px;">
+                        <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tr>
+                        <th>城市编码</th>
+                        <th>城市名称</th>
+                        <th>详细地址</th>
+                        <th>城市拼音</th>
+                    </tr>
+                    <tr th:each="city : ${city}">
+                        <td th:text="${city.id}">1</td>
+                        <td th:text="${city.name}">北京</td>
+                        <td th:text="${city.mername}">北京市</td>
+                        <td th:text="${city.pinyin}">拼音</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+</div>
+</section>
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<footer class="main-footer">
+    <div class="pull-right hidden-xs">
+        <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+</footer>
+<!-- jQuery 3 -->
+<script src="assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Slimscroll -->
+<script src="assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="assets/bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="assets/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="assets/dist/js/demo.js"></script>
+
+
+</body>
+</html>
